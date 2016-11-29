@@ -1,0 +1,352 @@
+html,body{
+    width:100%;height:100%;
+    margin:0;padding:0;
+}
+h3{
+    margin:0;padding:0;font-style: normal;
+}
+p{
+    margin: 0;padding:0;
+}
+body{
+    overflow: hidden;font-family:"Microsoft Yahei";color:#fff;
+}
+header{
+    width:100%;height:60px;
+    background:#168bdb;
+    position:fixed;left:0;top:0;
+    z-index: 999;
+}
+a{
+    text-decoration: none;color:#fff;
+}
+/*头部*/
+.header a:hover{
+    color: #67cbff;
+}
+.header{
+    width:1000px;height:60px;
+    display:flex;justify-content: space-between;
+}
+.header .index{
+    align-self: center;margin-top:11px;font-size: 15px;
+}
+.header .last{
+    align-self:flex-end;margin-bottom: 9px;font-size: 12px;
+}
+.header a:nth-of-type(1){
+    width:120px;height:40px;
+    background: url("../img/header.png") no-repeat 0 0;
+    margin-top:10px;
+}
+.header a:nth-of-type(5){
+    margin-left:160px;
+}
+.header a:nth-of-type(5) i{
+    display: inline-block;width:32px;height:25px;
+    background:url("../img/header.png") no-repeat -88px -154px;
+}
+.header a:nth-of-type(8){
+    color:#FFDA28;
+}
+/*拖动的四个部分*/
+#fullpage{
+    width:100%;height:100%;position: relative;
+}
+section{
+    width:100%;height:100%;position: relative;
+}
+/*第一屏*/
+section:nth-of-type(1){
+    background:url("../img/bg.jpg");
+}
+/*第一屏的云朵*/
+section:nth-of-type(1) .top{
+    width:100%;position:absolute;left:0;top:0;
+}
+section:nth-of-type(1) .top .top-cloud{
+    width:100%;height:1000px;
+    position:absolute;left:0;top:0;
+    background: url("../img/cloud_1.png") repeat;
+}
+section:nth-of-type(1) .middle{
+    width:100%;position:absolute;left:0;top:50%;
+}
+section:nth-of-type(1) .middle .middle-cloud{
+    width:100%;height:400px;
+    position:absolute;left:0;top:-200px;
+    background: url("../img/cloud_2.png") repeat;
+}
+section:nth-of-type(1) .bottom{
+    width:100%;position:absolute;left:0;bottom:0;
+}
+section:nth-of-type(1) .bottom .bottom-cloud{
+    width:100%;height:400px;
+    position:absolute;left:0;bottom:0;
+    background: url("../img/cloud_3.png") repeat;
+}
+section:nth-of-type(1) .top .top-cloud,section:nth-of-type(1) .middle .middle-cloud,section:nth-of-type(1) .bottom .bottom-cloud{
+    animation: cloudmove 100s linear infinite;
+    -webkit-animation: cloudmove 100s linear infinite;
+    -moz-animation: cloudmove 100s linear infinite;
+}
+@keyframes cloudmove {
+    0%{
+        background-position: 2000px 0;
+    }
+    50%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -2000px 0;
+    }
+}
+/*船只*/
+.river{
+    width:100%;height:126px;position:absolute;left:0;bottom:0;
+    background:#0d71cd url("../img/bg1.jpg");
+}
+.center{
+    width:1000px;position: relative;margin:0 auto;
+}
+.ice1{
+    position:absolute;top:-50px;left:-184px;visibility: visible;
+    width:265px;height:175px;background: url("../img/hill1.png");
+}
+.ice2{
+    position:absolute;top:-13px;left:650px;visibility: visible;
+    width:63px;height:78px;background: url("../img/hill2.png");
+}
+.ice3{
+    position:absolute;top:-48px;left:807px;visibility: visible;
+    width:260px;height:175px;background: url("../img/hill3.png");
+}
+.ship{
+    position:absolute;top:-192px;left:122px;visibility: visible;
+    width:242px;height:228px;background: url("../img/ship.png");
+}
+/*第一屏的飞机*/
+.fly{
+    width:100px;position:relative;margin:0 auto;
+}
+.baidu{
+    width:501px;height:158px;
+    position: absolute;
+    top: 125px;left:-446px;
+    background:url("../img/launch.png") no-repeat;
+    visibility: visible;
+}
+.plane{
+    width:119px;height:78px;
+    position:absolute;top:100px;left:-150px;
+    background: url("../img/flight.png") no-repeat;
+    visibility: visible;
+    animation: plane 3s infinite;
+}
+@keyframes plane {
+    0%{
+        top:100px;
+    }
+    50%{
+        top:110px;
+    }
+    100%{
+        top:100px;
+    }
+}
+/*登录*/
+.login{
+    width:340px;height:300px;
+    border-radius: 5px;
+    background: #4ebffc;position:absolute;right: -450px;top:130px;
+}
+.login-info{
+    padding:20px 20px 0 20px;
+}
+.user{
+    width:299px;height:40px;background: #fff;
+}
+.user input{
+    width:252px;padding:9px;height:20px;border:0;box-sizing: content-box;float: left;
+}
+.error{
+    height:20px;
+}
+.password{
+    width:300px;height:40px;
+}
+.password input{
+    width:299px;height:40px;border:0;float: left;
+}
+.token input{
+    width:122px;height:40px;
+}
+.login-action input{
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    width:299px;
+    background: #ffd850;
+    color: #5c4c12;
+    border-radius: 2px;
+}
+/*箭头*/
+.arrow{
+    width:100%;position:absolute;left:0;bottom:0;
+}
+.next-page{
+    display: block;
+    width:30px;height:26px;
+    background:url(../img/arrow.png);
+    position: absolute;left:485px;bottom:42px;
+    visibility: visible;
+    animation:arrow 1s infinite;
+    -webkit-animation: arrow 1s infinite;
+    -moz-animation: arrow 1s infinite;
+}
+@keyframes arrow {
+    0%{
+        bottom:42px;
+        opacity:1;
+    }
+    50%{
+        bottom:36px;
+        opacity:0.5;
+    }
+    100%{
+        bottom:42px;
+        opacity:1;
+    }
+}
+/*第二屏*/
+section:nth-of-type(2){
+    background:url("../img/bg1.jpg") no-repeat;
+}
+.title{
+    position: absolute;left:20px;top:220px;
+    width:500px;height:126px;
+}
+.title i{
+    width:66px;height:123px;float:left;
+    background: url("../img/lingxian.png") center;
+    animation:lingxian 2s infinite;
+    -webkit-animation:lingxian 2s infinite;
+    -moz-animation:lingxian 2s infinite;
+}
+@keyframes lingxian {
+    0%{
+        transform:rotateY(0deg);
+    }
+    50%{
+        transform:rotateY(0deg);
+    }
+    100%{
+        transform:rotateY(360deg);
+    }
+}
+.text{
+    position: relative;
+    left:20px;
+}
+.text .main-text{
+    font-size: 38px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    line-height: 48px;
+    margin-bottom: 6px;
+}
+.text p:nth-of-type(2){
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 32px;
+    opacity: 0.8;
+    z-index: 999;
+}
+.brain{
+    width:444px;height:427px;
+    position:absolute;top:130px;right:20px;
+    background: url("../img/brain.png");
+}
+.square{
+    width:44px;height:44px;
+    position: absolute;bottom:0;
+}
+.square1{
+    background:#35b568;left:70px;
+}
+.square2{
+    width:88px;height:88px;
+    left:158px;background:#4ac179;
+}
+.square3{
+    background:#8ae75a;
+    left:246px;
+}
+.square4{
+    background: #8ae75a;right:328px;
+}
+.square5{
+    background: #4ac179;right:220px;
+}
+/*第三屏*/
+section:nth-of-type(3){
+    background:url("../img/bg2.jpg") no-repeat;
+}
+section:nth-of-type(3) i{
+    background: url("../img/quanmian.png") center;
+}
+section:nth-of-type(3) .brain{
+    background: url("../img/allside.png") no-repeat;
+}
+section:nth-of-type(3) .river{
+    height:138px;
+    background:url("../img/bg-3-head.png");
+}
+section:nth-of-type(3) .square{
+    width:88px;height:88px;
+}
+section:nth-of-type(3) .square1{
+    background: #33bb9a;
+    left: 70px;top: 60px;
+}
+section:nth-of-type(3) .square2{
+    background: #29a2b8;
+    left: -18px;top: 148px;
+}
+section:nth-of-type(3) .square3{
+    background: #60cf6e;
+    left: 158px;top: 148px;
+}
+section:nth-of-type(3) .square4{
+    background: #218BD7;
+    left: 70px;top: 236px;
+    width:176px;height:176px;
+}
+section:nth-of-type(3) .square5{
+    background: #33bb9a;
+    left: 246px;top: 236px;
+}
+/*第四屏*/
+section:nth-of-type(4){
+    background:url("../img/bg3.jpg") no-repeat;
+}
+section:nth-of-type(4) i{
+    background: url("../img/zhuanye.png") center;
+}
+.bubble{
+    width:275px;height:245px;
+    position: absolute;left:-36px;top:-56px;
+    background: url("../img/bubble.png") no-repeat;
+    visibility: visible;
+}
+section:nth-of-type(4) .brain{
+    background: url("../img/stat.png") no-repeat;
+}
+section:nth-of-type(4) .river{
+    height:80px;
+    background: none;
+}
+.copy{
+    font-size: 12px;
+    line-height: 80px;text-align: center;
+}
